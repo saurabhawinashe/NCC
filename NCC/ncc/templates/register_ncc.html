@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Registration Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/mycss.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/headfoot.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/timer.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/button.css" %}">
+
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+        #loginbutton
+        {
+        	width: 50%;
+        }
+        #userid
+        {
+        	margin-right: 100px;
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+<script type="text/javascript">
+window.open ("yourPageURL","mywindow","status=1,toolbar=0");
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+</script>
+<script type="text/javascript">
+window.open ("yourPageURL","mywindow","status=1,toolbar=0");
+</script>
+    <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="" background="{% static "Images/stripesdark1.png" %}">
+
+        <!-- Navigation -->
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+          <div class="navbar-header"><a><img src="{% static "Images/pisb1.png" %}" height="48px" width="120px" style="padding-top: 8px;margin-left: 0px; padding-right: 8px; "></a></div>
+            <div class="navbar-header">
+              <a class="navbar-brand">
+
+                  <a class="navbar-brand" href="#"><span class="navtext" style="font-size:22px;"><b>REGISTER</b></span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+
+              <ul class="nav navbar-nav">
+
+              </ul>
+          </div>
+      </nav>
+
+      <!-- Page Content -->
+      <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-lg-5" id="form0">
+
+                    <h2 class="head">INSTRUCTIONS</h2>
+                    <p id="para" style="font-size:18px;font-color:rgb(255,255,255);"><br>
+                        1. The contest is of 2 HOURS.<br><br>
+
+2. The contest consists of 6 QUESTIONS.<br><br>
+
+3. Each question carries 100 MARKS.<br><br>
+
+4. Each question consists of 5 TEST CASES each
+of 20 marks.<br><br>
+
+5. Select a LANGUAGE every time before you
+submit the code .<br><br>
+
+6. SAVE --> LANGUAGE --> SUBMIT.<br><br>
+
+7. UPLOAD --> SUBMIT.<br><br>
+                    </p>
+
+                </div>
+                <div class="col-lg-1 text-center">
+
+
+                </div>
+                <div class="col-lg-6 text-center" id="form1">
+                    <form action="/submit" method="POST">{% csrf_token %}
+                        <h2 class="head">REGISTRATION FORM</h2>
+                        <div class="col-lg-6 text-center" class="inpt">
+                            <input type="text" name="pname1" placeholder="Player1 Name" class="plch"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player1 Name'" required><br>
+                            <input type="Email" name="pemail1" placeholder="Player1 Email ID" class="plch" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player1 Email ID'"  required><br>
+                            <input type="tel" maxlength="10" name="pphone1" placeholder="Player1 Contact Number" class="plch"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player1 Contact Number'" required><br>
+                        </div>
+                        <div class="col-lg-6 text-center" class="inpt">
+                            <input type="text" name="pname2" placeholder="Player2 Name" class="plch"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player2 Name'" ><br>
+                            <input type="Email" name="pemail2" placeholder="Player2 Email ID" class="plch"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player2 Email ID'" ><br>
+                            <input type="tel" maxlength="10" name="pphone2" placeholder="Player2 Contact Number" class="plch"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Player2 Contact Number'" ><br>
+                        </div>
+                        <div class="col-lg-12 text-left" class="inpt">
+                            <input type="text" name="team_name" placeholder="Enter username" class="user" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter username'" required><br>
+                            <input type="password" name="team_pass" placeholder="Enter Password" class="user"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Password'" required><br>
+                            <br>
+                            <div>
+                                <button class="btn red" id="loginbutton" type="submit"><span><b>LOGIN</b></span></button>
+                            </div>
+                            <p style="color:rgb(0,206,209);font-size:15px;">{{ message }}</p>
+                        </div>
+                    </form>
+
+                </div>
+                <br><br><br>
+            </div>
+
+            <!-- /.row -->
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="row2">
+             Copyright<b>©</b> : PICT IEEE STUDENT BRANCH,CTD'17
+        </div>
+    </footer>
+ <!-- /.container -->
+
+ <!-- jQuery Version 1.11.1 -->
+ <script src="{% static "js/jquery.js" %}"></script>
+
+ <!-- Bootstrap Core JavaScript -->
+ <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+</body>
+
+</html>

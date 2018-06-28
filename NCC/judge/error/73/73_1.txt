@@ -1,0 +1,3 @@
+/home/saurabh/credenz17/NCC/judge/user/73/1/73_1.cpp:1:17: error: ‘hgcgfg’ does not name a type
+                 hgcgfg
+                 ^

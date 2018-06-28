@@ -1,0 +1,159 @@
+
+    body {
+      /*  padding-top: 70px;*/
+        background-image: url(ci/wall.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*overflow: hidden;*/
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        background-attachment: fixed;
+    }
+        table{
+            font-family: cambria;
+            margin-top: 1%;
+            border: 2px solid blue;
+           /* border-collapse: collapse;*/
+            background-color: black;
+            opacity: .7;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 10%;
+            width:100%;
+            border: 3px solid blue;
+            border-radius: 10px;
+            box-shadow:  1px 1px 3px rgba(255,255,255,0.4);
+        }
+        th{
+            font-size: 25px;
+            padding: 8px;
+            text-align: center;
+            border-bottom: .05px solid #202020;
+
+        }
+        tr{
+            box-shadow: 1px 1px 3px rgba(255,255,255,0.4);
+            min-height: 8%;
+        }
+        td{
+            padding: 2px;
+            text-align: center;
+            border-bottom: .05px solid #202020;
+            font-size: 18px;
+        }
+        tr:hover{
+            background-color: azure;
+            color:black;
+            border-radius: 10px;
+        }
+        #pch{
+            border-radius: 10px 10px 0 0;
+        }
+        #pch:hover{
+            background-color: black;
+            color: white;
+            opacity: .7;
+        }
+        .pch1{
+            margin-top: 50px;
+            font-family: cambria;
+            font-size: 400%;
+            color: azure;
+            font-weight: 700;
+            text-align: center;
+        }
+        .table-curved{
+            border-radius: 5px;
+
+        }
+        .manu{
+            opacity: ;
+            width: 100%;
+            color: black;
+            font-size: 15px;
+            font-family: cambria;
+            font-size: 20px;
+            font-weight:600;
+            padding: 8px;
+            text-align: center;
+            border-bottom: .05px solid #202020;
+            background-color: gray;
+        }
+        .manu:hover{
+            background-color: black ;
+            opacity: .7;
+            color: white;
+        }
+        .top{
+            border-radius: 100%;
+            min-height: 150px;
+            min-width: 175px;
+            border: 2px solid blue;
+            background-color: black;
+            opacity: .7;
+            margin-bottom: 29%;
+        }
+        .cur{
+            border-radius: 100%;
+            min-width: 175px;
+            min-height: 150px;
+            border: 2px solid blue;
+            background-color: black;
+            opacity: .7;
+        }
+        .pb
+        {
+            margin-top:0px;
+            background:black;
+	        display:block;
+	        padding-top:10px;
+            padding-left:26px;
+            font-size:20px;
+            color:white;
+            height:50px;
+        }
+        .pch2{
+            margin-top: 3%;
+            font-family: cambria;
+            font-size: 250%;
+            color: azure;
+            font-weight: 600;
+            text-align: center;
+        }
+        .pch3{
+            font-family: cambria;
+            font-size: 250%;
+            color: azure;
+            font-weight: 600;
+            text-align: center;
+        }
+        .lol{
+            margin-top: 10%;
+            font-family: cambria;
+            font-size: 200%;
+            color: azure;
+            font-weight: 600;
+            text-align: center;
+        }
+        .lol1{
+            font-family: cambria;
+            font-size: 175%;
+            color: azure;
+            font-weight: 600;
+            text-align: center;
+        }
+        .table1{
+            overflow:scroll;
+            margin-bottom: 8%;
+            border-radius: 10px;
+        }
+
+        #manc{
+            font-size: 100px;
+        }
+        #fcb{
+            margin-top: -22%;
+        }
+        #rma{
+
+        }
+    

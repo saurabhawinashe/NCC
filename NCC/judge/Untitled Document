@@ -1,0 +1,18 @@
+os.uname()
+Return a 5-tuple containing information identifying the current operating system. The tuple contains 5 strings: (sysname, nodename, release, version, machine). Some systems truncate the nodename to 8 characters or to the leading component; a better way to get the hostname is socket.gethostname() or even socket.gethostbyaddr(socket.gethostname()).
+
+
+
+sys.stdin
+sys.stdout
+sys.stderr¶
+File objects corresponding to the interpreter’s standard input, output and error streams. stdin is used for all interpreter input except for scripts but including calls to input() and raw_input(). stdout is used for the output of print and expression statements and for the prompts of input() and raw_input(). The interpreter’s own prompts and (almost all of) its error messages go to stderr. stdout and stderr needn’t be built-in file objects: any object is acceptable as long as it has a write() method that takes a string argument. (Changing these objects doesn’t affect the standard I/O streams of processes executed by os.popen(), os.system() or the exec*() family of functions in the os module.)
+
+
+
+
+
+
+
+
+This displays only the machine hardware name and indicates, as above, whether your system is 32-bit (“i686” or “i386”) or 64-bit (“x86_64”).

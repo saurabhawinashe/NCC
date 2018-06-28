@@ -1,0 +1,42 @@
+Naman and Pratik are playing a game as follows. Initially Naman has a set of strings S1 of size N1 and Pratik has a set S2 of size N2. Now they play alternatively and select a string from their respective sets and insert it into a set S if it satisfies the following conditions –
+1. If Naman has selected a string from set S1 to insert into set S then LCS of this string with all the strings in set S, taken individually, which have been inserted by Pratik should be at most K.
+2. If Pratik has selected a string from set S2 to insert into set S then LCS of this string with all the strings in set S, taken individually, which have been inserted by Naman should be at most K.
+3. In all other cases, the selected string can’t be inserted into the set S.
+Since Naman and Pratik are best friends they aren’t playing against each other and decide to play this game optimally to maximize the size of set S. 
+Note that if one player runs out of strings to select the other keeps on playing until he has finished all his strings.
+Your job is to find the maximum size of set S that Naman and Pratik can achieve and print it.
+
+
+Input format –
+First line contains T denoting the number of test cases.
+First line of each test case contains three integers N1, N2 and K as given in the problem statement 
+Next N1 lines contain one string each which denote the strings belonging to set S1
+Next N2 lines contain one string each which denote the strings belonging to set S2
+
+Output format –
+Print a single integer for each test case on a new line which is the answer to the given problem.
+Constraints – 
+1<= T <= 10
+1<= N1,N2 <= 250
+1<= K <= 50
+1 <= size of string in S1 and S2 <= 50
+Sum of N1 and N2 over all test cases doesn't exceed 500.
+
+Sample test case –
+Input –
+
+1
+3 3 1
+abc
+agh
+akl
+blp
+mnz
+abcghkl
+
+Output –
+5
+
+
+
+

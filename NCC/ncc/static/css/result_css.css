@@ -1,0 +1,250 @@
+
+    body {
+
+        background-image: url(ci/wall.gif);
+        overflow:hidden;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    #nav1{
+            background:rgba(0,0,0,0.7);
+            height:5px;
+            margin-bottom:8px;
+          }
+    .img1{
+    height: 45px;
+    width: 150px;
+    border-radius:10px;
+    /*margin-top: px;*/
+    margin-top: -10px;
+    position: relative;
+    left: 1100px;
+    }
+    .img2{
+    height: 75px;
+    width: 90px;
+    border-radius:10px;
+    margin-top: -18px;
+    }
+    .pb
+    {
+        margin-top:0px;
+        background:black;
+      display:block;
+      padding-top:10px;
+        padding-left:26px;
+        font-size:20px;
+        color:white;
+        height:50px;
+    }
+      .div1{
+        -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+    box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+      height:240px;
+      width: 70px;
+      position: relative;
+      margin-top: -100px;
+      left: 700px;
+      border: 3px solid white;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: 2s;
+      }
+
+        .div2{
+          -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+      box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+          height: 70px;
+          width: 240px;
+            position: relative;
+            left:531px;
+            top:-70px;
+            border: 3px solid white;
+            border-radius: 3px;
+
+        }
+
+        .div3{
+          -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+      box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+          height: 240px;
+          width: 70px;
+            position: relative;
+            top:-140px;
+            left:530px;
+            border: 3px solid white;
+            border-radius: 3px;
+
+        }
+        .div4{
+          -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+      box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+          height: 70px;
+          width: 240px;
+            position: relative;
+            left:360px;
+            top:-210px;
+            border: 3px solid white;
+            border-radius: 3px;
+        }
+        .div5{
+          -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+        box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+          height: 240px;
+          width: 70px;
+            position: relative;
+            top:-280px;
+            left:360px;
+            border: 3px solid white;
+            border-radius: 3px;
+        }
+        .div6{
+          -webkit-box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+      box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.2) inset;
+          height: 70px;
+          width: 240px;
+            position: relative;
+            left:190px;
+            top:-350px;
+            border: 3px solid white;
+            border-radius: 3px;
+        }
+        .question{
+             border: 2px solid silver;
+          padding-top: 5%;
+          padding-left: 5%;
+          height: 135px;
+          border-radius: 20px;
+          /*margin-bottom: 10px;*/
+
+          /*background-color: black;*/
+          /*opacity: 0.5;*/
+
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          /*border: none;*/
+          font: normal 12px/normal "Times New Roman", Times, serif;
+          color: rgba(0,0,0,0.9);
+          -o-text-overflow: clip;
+          /*text-overflow: clip;*/
+          -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,0.5) ;
+          box-shadow: 0 0 2px 2px rgba(0,0,0,0.5) ;
+        }
+        .pding{
+            margin-top: 50px;
+        }
+        .pding1{
+
+            color:white;
+            position:relative;
+            top:100px;
+
+            left:-80px;
+
+            font-size: 24px;
+        }
+        .text{
+          text-shadow: 4px 4px 6px rgba(0,0,0,0.5) ;
+            position: relative;
+            top: 10px;
+            left: 20px;
+
+            font-family: "Rockwell Condensed";
+           color:white;
+           text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
+            font-size: 34px;
+        }
+        .text1{
+           font-family: "Berlin Sans FB","Comic Sans MS";
+           color:white;
+           font-size:32px;
+           /*position: relative;
+           top:5px;
+           left: 530px;*/
+        }
+        .text1_1{
+          font-family: "Berlin Sans FB","Comic Sans MS";
+          color:white;
+          font-size:32px;
+          position: relative;
+          top:-25px;
+          left: 720px;
+        }
+        #img3{
+          height: 600px;
+          width: 900px;
+          position: relative;
+          left: -50px;
+          border-radius: 20px ;
+          border: 2px solid white;
+          /*background-image:url("ci/blackboard2.jpg");*/
+          background-size: cover;
+          color: white;
+          visibility: hidden;
+        }
+
+        @font-face {
+          font-family: my;
+          src: url("fonts/DK Crayon Crumble.ttf");
+
+        }
+        #img4{
+          height: 600px;
+          width: 900px;
+          position: relative;
+          left: -50px;
+          border-radius: 20px ;
+          border: 2px solid white;
+          /*background-image:url("ci/blackboard2.jpg");*/
+          background-size: cover;
+          color: white;
+
+          font-family: my;
+          /*transition:15s;*/
+
+        }
+        .maindiv{
+          font-family: my;
+          padding-left: 20px;
+          font-size:38px;
+        }
+        .cf1{
+          border-bottom: 3px dashed white;
+          height: 300px;
+          padding-left: -20px;
+          padding-top: 20px;
+        }
+        .cf2{
+
+          height: 300px;
+          padding-left: -20px;
+          padding-top: 20px;
+        }
+        .marks{
+          height: 75px;
+          width: 75px;
+          font-family: my;
+        }
+        p{
+
+        padding-left: 40%;
+        font-size: 65px;
+        }
+        .span1{
+          /*transition: 20s;*/
+          font-weight: bold;
+        }
+        .span2{
+          font-size: 30px;
+          cursor: pointer;
+          position: relative;
+          top:-50px;
+          left: 20px;
+        }
+        .spanscore{
+          position: relative;
+          left: 80px;
+          top: 20px;
+          font-weight: 300;
+        }
+    

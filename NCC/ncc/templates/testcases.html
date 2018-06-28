@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Test Cases</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/testcases.css" %}" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="{% static "css/headfoot.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "css/timer.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/button.css" %}">
+    <script src="{% static "js/timerscript.js" %}"></script>
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        background-image: url(static/Images/stripesdark1.png);
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    .errorbox
+    {
+	width: 95%;
+	height: 100px;
+	      box-shadow: 5px 5px 9px black;
+	background: rgb(20,20,20);
+	border-color: black;
+	color: rgb(0,206,209);
+	border-radius: 10px;
+	margin-left:0px;
+	outline: none;
+    }
+    </style>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+</head>
+<script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Feb 13, 2017 19:55:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML = hours + ":"
+    + minutes + ":" + seconds;
+
+    // If the count down is over, write some text
+    if (distance <= 1000) {
+        clearInterval(x);
+        document.getElementById("demo").click();
+    }
+}, 1000);
+</script>
+<script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+</script>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+          <div class="navbar-header"><a><img src="{% static "Images/pisb1.png" %}" height="48px" width="120px" style="padding-top: 8px;margin-left: 0px; padding-right: 8px; "></a></div>
+            <div class="navbar-header">
+              <a class="navbar-brand">
+
+                     <a class="navbar-brand"><span class="navtext" style="width:680px;font-size:22px;"><b>TEST CASES</b> </span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+
+              <ul class="nav navbar-nav" style="margin-top:10px;">
+                  <li><label class="STLabel" id="timer" style="padding-left:280px; margin-left:1px;color:rgb(0,206,209);font-size:22px;"></label></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right"><!--Right side pe baaki pages ke links ke liye-->
+                  <li><a><span class="navtext"><b>SCORE: {{ p.total_score }}</b></span></a></li>
+                  <li><a href="/questions"><span class="navtext"><b>QUESTION HUB</b></span></a></li>
+                  <li><a href="/leaderboard"><span class="navtext"><b>LEADERBOARD</b></span></a></li>
+
+                  <li><a href="/logout" id="demo"><span class="navtext"><b>LOGOUT</b></span><span class="glyphicon glyphicon-log-out"></span></a></li>
+              </ul>
+          </div>
+      </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <br>
+            <br><br><br>
+                 <table style="width=100%">
+                    <tr>
+                        <th>TEST CASE</th>
+                        <th>SCORE</th>
+                        <th>STATUS</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td id="score1"></td>
+                        <td id="status1"><span>TLE</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td id="score2"></td>
+                        <td id="status2"> <span>Success</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td id="score3"></td>
+                        <td id="status3"> <span>Wrong Answer</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td id="score4"></td>
+                        <td id="status4"> <span>Warning</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td id="score5"></td>
+                        <td id="status5"> <span>Warning</span></td>
+                    </tr>
+
+
+                    </table>
+
+            </div>
+        </div>
+        <div class="row3">
+        <div class="col-lg-12 text-center">
+            <br>
+            <p style="color:rgb(0,206,209);font-size:20px;">Total test cases passes: <label id="test_case" style="color:rgb(0,206,209);font-size:20px;"></label></p>
+            <br>
+            <p style="color:rgb(0,206,209);font-size:20px;">Score: <label id="totalscore" style="color:rgb(0,206,209);font-size:20px;"></label></p>
+
+            <script src="{% static "js/jquery.js" %}"></script>
+            <script>
+
+            </script>
+            <hr>
+            <p style="color:rgb(0,206,209);font-size:20px;">
+                {{ message }}
+            </p>
+
+        </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+          <script>
+        console.log("you are in");
+        var data =  setTimeout(myFunction,0);
+        function myFunction() {
+            console.log("function called");
+            var total=0;
+            var data1 = "{{out1}}";
+            var data2 = "{{out2}}";
+            var data3 = "{{out3}}";
+            var data4 = "{{out4}}";
+            var data5 = "{{out5}}";
+            console.log(data1);
+            if (data1 == "R"){
+            console.log("you are in the if loop");
+            document.getElementById("score1").innerHTML = 20;
+            document.getElementById("status1").innerHTML = "Test Case Successful";
+            total = total+20;}
+            else {
+            document.getElementById("score1").innerHTML = 0;
+            if(data1 == "C")
+            {
+                document.getElementById("status1").innerHTML = "Compile Time Error";
+            }
+            else if(data1 == "W")
+            {
+                document.getElementById("status1").innerHTML = "Wrong Answer";
+            }
+            else if(data1 == "A")
+            {
+                document.getElementById("status1").innerHTML = "Abnormal Termination";
+            }
+            else
+            {
+                document.getElementById("status1").innerHTML = "Time Limit Exceeded";
+            }
+            }
+
+
+
+            if (data2=="R"){
+            document.getElementById("score2").innerHTML = 20;
+            document.getElementById("status2").innerHTML = "Test Case Successful";
+            total = total+20;}
+             else {
+            document.getElementById("score2").innerHTML = 0;
+            if(data2 == "C")
+            {
+                document.getElementById("status2").innerHTML = "Compile Time Error";
+            }
+            else if(data2 == "W")
+            {
+                document.getElementById("status2").innerHTML = "Wrong Answer";
+            }
+            else if(data2 == "A")
+            {
+                document.getElementById("status2").innerHTML = "Abnormal Termination";
+            }
+            else
+            {
+                document.getElementById("status2").innerHTML = "Time Limit Exceeded";
+            }
+            }
+
+            if (data3=="R"){
+            document.getElementById("score3").innerHTML = 20;
+            document.getElementById("status3").innerHTML = "Test Case Successful";
+            total = total+20;}
+             else {
+            document.getElementById("score3").innerHTML = 0;
+            if(data3 == "C")
+            {
+                document.getElementById("status3").innerHTML = "Compile Time Error";
+            }
+            else if(data3 == "W")
+            {
+                document.getElementById("status3").innerHTML = "Wrong Answer";
+            }
+            else if(data3 == "A")
+            {
+                document.getElementById("status3").innerHTML = "Abnormal Termination";
+            }
+            else
+            {
+                document.getElementById("status3").innerHTML = "Time Limit Exceeded";
+            }
+            }
+
+            if (data4=="R"){
+            document.getElementById("score4").innerHTML = 20;
+            document.getElementById("status4").innerHTML = "Test Case Successful";
+            total = total+20;}
+             else {
+            document.getElementById("score4").innerHTML = 0;
+            if(data4 == "C")
+            {
+                document.getElementById("status4").innerHTML = "Compile Time Error";
+            }
+            else if(data4 == "W")
+            {
+                document.getElementById("status4").innerHTML = "Wrong Answer";
+            }
+            else if(data4 == "A")
+            {
+                document.getElementById("status4").innerHTML = "Abnormal Termination";
+            }
+            else
+            {
+                document.getElementById("status4").innerHTML = "Time Limit Exceeded";
+            }
+            }
+
+
+            if (data5=="R"){
+            document.getElementById("score5").innerHTML = 20;
+            document.getElementById("status5").innerHTML = "Test Case Successful";
+            total = total+20;}
+             else {
+            document.getElementById("score5").innerHTML = 0;
+            if(data5 == "C")
+            {
+                document.getElementById("status5").innerHTML = "Compile Time Error";
+            }
+            else if(data5 == "W")
+            {
+                document.getElementById("status5").innerHTML = "Wrong Answer";
+            }
+            else if(data5 == "A")
+            {
+                document.getElementById("status5").innerHTML = "Abnormal Termination";
+            }
+            else
+            {
+                document.getElementById("status5").innerHTML = "Time Limit Exceeded";
+            }
+}
+    document.getElementById("totalscore").innerHTML = total;
+    document.getElementById("test_case").innerHTML = total/20;
+}
+      </script>
+
+    <!-- /.container -->
+     <footer>
+        <div class="row2">
+             Copyright<b>©</b> : PICT IEEE STUDENT BRANCH,CTD'17
+        </div>
+    </footer>
+    <!-- jQuery Version 1.11.1 -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+</body>
+
+</html>

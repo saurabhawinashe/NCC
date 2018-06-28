@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form action = "/submit" method = "post">
+    {% csrf_token %}
+    Player1 name:<input type="text" name = "pname1"><br>
+    Player1 Email:<input type="email" name = "pemail1"><br>
+    Player1 Number:<input type="tel" name="pphone1"><br>
+    Player2 name:<input type="text" name = "pname2"><br>
+    Player2 Email:<input type="email" name = "pemail2"><br>
+    Player2 Number:<input type="tel" name = "pphone2"><br>
+    Team name:<input type="text" name="team_name"><br>
+    Team Password:<input type="password" name="team_pass"><br>
+    <input type="submit" value="Register">
+    {{ message }}
+</form>
+</body>
+</html>

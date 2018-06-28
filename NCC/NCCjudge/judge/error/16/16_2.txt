@@ -1,0 +1,45 @@
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:14:1: error: expected ‘;’ after class definition
+ }
+ ^
+In file included from /usr/include/sched.h:28:0,
+                 from /usr/include/pthread.h:23,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/gthr-default.h:35,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/gthr.h:148,
+                 from /usr/include/c++/5/ext/atomicity.h:35,
+                 from /usr/include/c++/5/bits/basic_string.h:39,
+                 from /usr/include/c++/5/string:52,
+                 from /usr/include/c++/5/bitset:47,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:65,
+                 from /home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:3:
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:13:27: error: could not convert ‘0l’ from ‘long int’ to ‘node’
+     node *first=NULL,last=NULL;
+                           ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp: In function ‘void insert(int)’:
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:20:8: error: ‘start’ was not declared in this scope
+     if(start==NULL)
+        ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:9:11: error: ‘node* node::next’ is private
+     node *next;
+           ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:23:15: error: within this context
+         new1->next=NULL;
+               ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp: In function ‘int main()’:
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:35:5: error: reference to ‘list’ is ambiguous
+     list l1;
+     ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:11:7: note: candidates are: class list
+ class list
+       ^
+In file included from /usr/include/c++/5/list:63:0,
+                 from /usr/include/x86_64-linux-gnu/c++/5/bits/stdc++.h:78,
+                 from /home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:3:
+/usr/include/c++/5/bits/stl_list.h:507:11: note:                 template<class _Tp, class _Alloc> class std::__cxx11::list
+     class list : protected _List_base<_Tp, _Alloc>
+           ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:36:5: error: ‘l1’ was not declared in this scope
+     l1.insert(50);
+     ^
+/home/saurabh/CTD/NCC/judge/user/16/2/16_2.cpp:37:14: error: ‘p’ was not declared in this scope
+     l1.node *p=new node;
+              ^

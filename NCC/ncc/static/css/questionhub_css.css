@@ -1,0 +1,118 @@
+
+
+#q1{margin-top:7%;
+}
+.f{
+	color:yellow;
+	font-family:century schoolbook;
+	font-weight:900;
+	font-size:26px;
+}
+
+	   .btf1{
+
+
+     height:200px;
+	 width:100%;
+    background-color:rgba(0,0,0,0);
+    font-size:180%;
+    font-style:normal;
+    font-weight:bold;
+    font-family:copperplate gothic light;
+    color:black;
+    border-radius:7px;
+	opacity:1;
+	box-shadow: 0 5px #000;
+
+
+
+  }
+  .pb
+  {
+      margin-top:0px;
+      background:black;
+    display:block;
+    padding-top:10px;
+      padding-left:26px;
+      font-size:20px;
+      color:white;
+      height:50px;
+  }
+   .btf{
+
+
+     height:200px;
+	 width:100%;
+    background-color:rgba(0,0,0,0);
+    font-size:180%;
+    font-style:normal;
+    font-weight:bold;
+    font-family:copperplate gothic light;
+    color:black;
+    border-radius:7px;
+	opacity:1;
+
+	 outline: none;
+	 text-align:center;
+
+
+  }
+
+ .btf:focus {
+  outline: none;
+}
+
+
+   .logi:hover{
+    background: linear-gradient(to right,#96A2C2,#01213E);
+  }
+   .btf1:hover{
+    background: linear-gradient(to right,#96A2C2,#01213E);
+  }
+
+.btf:active{
+
+  box-shadow: 0 2px #000;
+  transform: translateY(2px);
+}
+
+
+  .btf:hover > .btf-header, .btf.focused > .btf-header {
+  width: 10rem;
+
+}
+.btf:hover > .btf-header > .text {
+  font-size: 50%;
+  transform: rotate(-90deg);
+  padding-bottom:50px;
+
+
+}
+
+
+.btf-header {
+	margin-top:-55.5%;
+	height:200px;
+	 width:100%;
+    background-color:silver;
+    font-size:180%;
+    font-style:normal;
+    font-weight:bold;
+    font-family:copperplate gothic light;
+    color:black;
+    border-radius:7px;
+	opacity:0.9;
+	box-shadow: 0px #000;
+
+  transition: width 0.5s ease-in-out;
+}
+.btf-header > .text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 5rem;
+
+  line-height: 20rem;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}

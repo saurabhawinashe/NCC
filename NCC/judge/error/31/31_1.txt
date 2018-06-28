@@ -1,0 +1,4 @@
+/home/saurabh/CTD/NCC/judge/user/31/1/31_1.cpp: In function ‘int main()’:
+/home/saurabh/CTD/NCC/judge/user/31/1/31_1.cpp:17:9: error: expected primary-expression before ‘}’ token
+         }
+         ^

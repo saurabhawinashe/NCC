@@ -1,0 +1,4 @@
+/home/saurabh/CTD/NCC/judge/user/30/5/30_5.cpp:2:24: fatal error: QApplication: No such file or directory
+ #include <QApplication>
+                        ^
+compilation terminated.

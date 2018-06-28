@@ -1,0 +1,4 @@
+/home/saurabh/CTD/NCC/judge/user/19/1/19_1.cpp: In function ‘int main()’:
+/home/saurabh/CTD/NCC/judge/user/19/1/19_1.cpp:14:9: error: expected ‘;’ before ‘else’
+         else
+         ^

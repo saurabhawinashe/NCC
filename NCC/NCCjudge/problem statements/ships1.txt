@@ -1,0 +1,33 @@
+Anuj's father works in Merchant Navy. His father presented Anuj with a problem about the cargo his crew was pondering over.
+The problem goes as follows:
+Some balls are to be put into crates, and these crates put into ships. A ship can have k number of crates only if there exists a ship with k-1 number of crates, and a crate can have p balls if there exists a crate with p-1 balls in the same ship. No ship can have 0 crates and no crate can have 0 balls. Given the number of ships N, the crew is allowed to use as many crates and ships as permitted. What is the maximum number of balls the crew can store?
+Since Anuj is not that good with mathematical puzzles, he asked his mathemagician friend Shubham to help him answer the question.
+Print the answer modulo 10^9+7
+
+Input format:
+First line contains the number of test cases,T.
+Each test case contains a single integer, N.
+
+Output format:
+Print the maximum number of balls that the crew can store.
+
+Constraints:
+Subtask 1: (20 points)
+1<=T<=10
+1<=N<=10^4
+
+Subtask 2: (80 points)
+1<=T<=10^5
+1<=N<=10^9
+
+Sample:
+Input:
+3
+3
+7
+9
+
+Output:
+10
+84
+165

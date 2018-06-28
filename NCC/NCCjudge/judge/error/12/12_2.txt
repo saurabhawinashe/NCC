@@ -1,0 +1,3 @@
+/home/saurabh/CTD/NCC/judge/user/12/2/12_2.cpp:2:1: error: ‘sdkdvikbsid’ does not name a type
+ sdkdvikbsid
+ ^

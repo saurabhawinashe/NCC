@@ -1,0 +1,29 @@
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main()
+ ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c: In function ‘main’:
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:15:19: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+             scanf("%d",s[k]);
+                   ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:21:14: error: ‘k’ undeclared (first use in this function)
+         if(s[k]>=)
+              ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:21:14: note: each undeclared identifier is reported only once for each function it appears in
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:21:18: error: expected expression before ‘)’ token
+         if(s[k]>=)
+                  ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c: At top level:
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:24:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main()
+ ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:24:1: error: redefinition of ‘main’
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:2:1: note: previous definition of ‘main’ was here
+ main()
+ ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c: In function ‘main’:
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:38:19: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+             scanf("%d",s[k]);
+                   ^
+/home/saurabh/CTD/NCC/judge/user/55/2/55_2.c:44:13: error: ‘k’ undeclared (first use in this function)
+         for(k=0;k<=j;k++)
+             ^

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Results Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/headfoot.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/timer.css">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        background-color: rgb(0,0,0);
+        background-image: url(Images/stripesdark.png); 
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    .foot{
+            font-family: "Calibri";
+            vertical-align:text-bottom;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: grey; 
+       }s
+        .score  { text-align: center;
+       color: black;
+        margin-top: 0px;
+        margin-bottom:  0px;
+       
+   
+}
+.scoreee{
+
+  -moz-animation-name:score1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:0s;
+
+        animation-name:score1
+        animation-duration:2s;
+        animation-delay:0s;
+
+        -webkit-animation-name:score1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:0s;
+}
+ @-moz-keyframes score1 {
+  from {
+    transform : scale(0);
+    opacity: 0;
+  }
+
+  to {
+   transform : scale(1);
+    opacity: 1;
+  }
+}
+.result{
+-moz-animation-name:result1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:2s;
+        -moz-animation-fill-mode:backwards;
+        animation-name:result1;
+        animation-duration:2s;
+        animation-delay:0s;
+
+        -webkit-animation-name:result1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:0s;
+}
+
+@-moz-keyframes rank1 {
+  from {
+    transform : scale(0);
+    opacity: 0;
+  }
+
+  to {
+   transform : scale(1);
+    opacity: 1;
+  }
+}
+
+        .rank  {
+       -moz-animation-name:rank1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:1s;
+        -moz-animation-fill-mode:backwards;
+
+        animation-name:rank1;
+        animation-duration:2s;
+        animation-delay:1s;
+animation-fill-mode:backwards;
+
+        -webkit-animation-name:rank1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:1s;
+                -webkit-animation-fill-mode:backwards;
+
+       }
+  
+  #score111{
+    font-size: 40px;
+  }
+  #rank111
+  {
+    font-size: 50px;
+  }
+  .glow
+  {
+    color: rgb(0,206,208);
+    margin-top: 45px;
+    text-align: center;
+   /* box-shadow: 10px 10px 20px black;
+    background-color: black;*/
+  }
+
+        .pie{
+        margin-top: 50px;
+        color: white;
+        background-color: black;
+        /*border: 2px solid black;*/
+        opacity: 1;
+        -moz-animation-name:chart1;
+        -moz-animation-duration:3s;
+        -moz-animation-delay:0s;
+
+        animation-name:chart1;
+        animation-duration:3s;
+        animation-delay:0s;
+
+        -webkit-animation-name:chart1;
+        -webkit-animation-duration:3s;
+        -webkit-animation-delay:0s;
+      }
+      @-moz-keyframes chart1
+      {
+
+        0%{
+          opacity: 0;
+        }
+      100%{
+          opacity: 1;
+      }
+        }
+      }
+      #piechart{
+        border: 10px solid white;
+        background-color: black;
+      }
+      .back{
+      	background-color: black;
+      	
+      }
+      #chartContainer{
+      /*background-color: rgb(135,206,235);*/
+      background-color: black;box-shadow: 10px 10px 20px black;
+     height: 1000px;
+
+      
+}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     <script type="text/javascript">
+window.onload = function () {
+  var xper,yper,zper,x1,y1,z1;
+  x1=3;
+  y1=2;
+  z1=1;
+  xper=(x1/6)*100;
+  yper=(y1/6)*100;
+  zper=(z1/6)*100;
+  var chart = new CanvasJS.Chart("chartContainer",
+  {
+    title:{
+      text: "Performance"
+    },
+                animationEnabled: true,
+    legend:{
+      verticalAlign: "bottom",
+      horizontalAlign: "center",
+      fontSize: 20,
+      fontFamily: "Calibri",
+      color:"white"    
+    },
+    theme: "theme2",
+    data: [
+    {        
+      type: "pie",       
+      indexLabelFontFamily: "Calibri",       
+      indexLabelFontSize: 20,
+      indexLabel: "{label} {y}%",
+      startAngle:-90,      
+      showInLegend: true,
+      toolTipContent:"{legendText} {y}%",
+      dataPoints: [
+        {  y: xper.toPrecision(2), legendText:"Un-attempted Questions", label: "Un-attempted" ,color:"rgb(0,51,153)"},
+        {  y: yper.toPrecision(2), legendText:"Attempted Correct Questions", label: "Correct",color:"rgb(0,136,204 )" },
+        {  y: zper.toPrecision(2), legendText:"Attempted Wrong Questions ", label: "Wrong",color:"rgb(0,255,255)" }
+        
+      ]
+    }
+    ]
+  });
+  chart.render();
+}
+</script>
+<script type="text/javascript" src="js/canvasjs.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand">
+                  <img src="Images/pisb.png" height="160%">
+                  <a class="navbar-brand" href="#"><span class="navtext">Result Page</span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+
+              <ul class="nav navbar-nav">
+
+              </ul>
+              <ul class="nav navbar-nav navbar-right"><!--Right side pe baaki pages ke links ke liye-->
+                  <li><a href="#"><span class="navtext">About us</span></a></li>
+
+              </ul>
+          </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 text-center score glow">
+              <br>
+                             <div class = "scoreee"> <h1><b ><u>YOUR RANK</u></b>
+                              <br>
+                              <br>
+                                 <font id="rank111"> 3 </font>
+                              <br><br><br><br></div>
+              <div class="rank"> <h1> <b><u>YOUR SCORE</u></b><br>
+                <br>
+                          <font id="score111">  45 </font>
+                <br></h1>
+                <br>
+                </div>
+            </div>
+            <div class="col-lg-8 text-center pie">
+            <div class="back">
+                <div id="chartContainer" style="height: 450px; width: 100%;"></div>
+                </div>
+            </div>
+             
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+ <footer>
+        <div class="row2">
+             COPYRIGHT,CTD'17, PICT IEEE STUDENT'S BRANCH 2016
+        </div>
+    </footer>
+
+</body>
+
+</html>

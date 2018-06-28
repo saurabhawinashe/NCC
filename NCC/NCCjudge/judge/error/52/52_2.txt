@@ -1,0 +1,11 @@
+/home/saurabh/CTD/NCC/judge/user/52/2/52_2.cpp: In function ‘int main()’:
+/home/saurabh/CTD/NCC/judge/user/52/2/52_2.cpp:26:8: error: overloaded function with no contextual type information
+     max=z;
+        ^
+/home/saurabh/CTD/NCC/judge/user/52/2/52_2.cpp:29:10: error: name lookup of ‘z’ changed for ISO ‘for’ scoping [-fpermissive]
+    cout<<z<<endl;
+          ^
+/home/saurabh/CTD/NCC/judge/user/52/2/52_2.cpp:29:10: note: (if you use ‘-fpermissive’ G++ will accept your code)
+/home/saurabh/CTD/NCC/judge/user/52/2/52_2.cpp:32:1: error: expected ‘}’ at end of input
+ }
+ ^

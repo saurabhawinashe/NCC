@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>About us</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/headfoot.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "css/timer.css" %}">
+
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        background-color: rgb(0,0,0);
+        background-image: url(static/Images/stripesdark1.png);
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+   span{
+    display: table-cell;
+    vertical-align: middle;
+
+   }
+   #f{
+            -moz-transform:rotate(-45deg);
+
+   }
+
+     #title
+   {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 3px;
+    color: rgb(0,206,208);
+
+   }
+   hr{
+    width:95%; 
+    height:3px;
+    color: blue;
+   }
+   p{
+    text-indent: 100px;
+    
+    color: rgb(101,255,255);
+    font-size: 27px;
+   }
+   
+   #maindiv
+   {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+   }
+
+   #boxdiv{
+    width: 300px;
+
+
+    -moz-animation:rotate 5s infinite ease-in-out;
+   }
+   #boxdiv div
+   {
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-weight: 0px;
+    font-style: bold;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+border:5px solid white;
+border-radius:100%;
+display: table;
+text-shadow:2px 2px 3px rgb(0,0,255);
+margin-right: 0px;
+   }
+   #front
+   {
+    -moz-transform:rotateZ(45deg)  translateZ(150px);
+    background: rgba(0,206,208,1);
+
+   }
+#back{
+        -moz-transform: rotateZ(45deg)rotateY(180deg) translateZ(150px);
+        background: rgba(0,206,208,1);
+}
+    #right{
+               -moz-transform:  rotateY(60deg) translateZ(150px);
+                tramsform-origin: right;
+                background: rgba(0,206,208,1);
+    }
+    #left{
+                -moz-transform:  rotateY(-60deg) translateZ(150px);
+                -moz-tramsform-origin: left;
+                background: rgba(0,206,208,0.9);
+    }
+    #bottom{
+                -moz-transform: rotateX(60deg) translateZ(150px);
+                -moz-tramsform-origin:bottom;
+                background: rgba(0,206,208,0.9);
+    }
+    #top{
+                -moz-transform: rotateX(-60deg) translateZ(150px);
+                -moz-tramsform-origin:top;
+                background: rgba(0,206,208,0.9);
+    }
+
+    @-moz-keyframes rotate
+    {
+        0%
+        {
+
+            -moz-transform: rotateY(0deg);
+
+
+        }
+       100%
+        {
+
+            -moz-transform:rotateY(360deg);
+
+        }
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via fsile:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sept 13, 2017 16:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML = hours + ":"
+    + minutes + ":" + seconds;
+
+    // If the count down is over, write some text
+    if (distance <= 1000) {
+        clearInterval(x);
+        window.location.href="";
+    }
+}, 1000);
+</script>
+
+
+<body>
+
+    <!-- Navigation -->
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+          <div class="navbar-header"><a><img src="{% static "Images/pisb1.png" %}" height="48px" width="120px" style="padding-top: 8px;margin-left: 0px; padding-right: 8px; "></a></div>
+            <div class="navbar-header">
+              <a class="navbar-brand">
+
+                  <a class="navbar-brand"><span class="navtext" style="width:550px;font-size:22px;"><b>ABOUT US</b></span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+          </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-5 text  ">
+           
+
+            <div id="maindiv">
+                <div id="boxdiv">
+                      <div id="front"  ><span id="f">NCC<br><ul class="nav navbar-nav" style="margin-top:10px;">
+                  <li><label class="STLabel" id="timer" style="margin-left:78px;color:rgb(255,255,255);"></label></li>
+              </ul></span></div>
+
+
+                </div>
+
+            </div>
+  </div>
+<div class="col-lg-1 text-center  "></div>
+
+<div class="col-lg-6 text-center  ">
+
+    <hr>
+           <h2>
+             <p>National Computing Contest(NCC) is held in PICT. It is organised by PICT-IEEE Student Branch(PISB) in collaboration with Nalini Foundation. The event is being organized since past few years and it is regarded as a reputed national level computing contest. In keeping with the tradition of bringing the best coders of the city under one roof, PISB is organizing NCC.</p><p>The contest comprises of several algorithmic problems of varying difficulty, which are to be solved by participants in C/C++. So, are you ready to analyse algorithms, search strings and traverse trees to climb your way up to victory?</p></h2>
+<hr>
+</div>
+
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+<footer>
+        <div class="row2">
+            Copyright<b>©</b> : PICT IEEE STUDENT BRANCH,CTD'17
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/home/saurabh/CTD/NCC/judge/user/26/5/26_5.c: In function ‘main’:
+/home/saurabh/CTD/NCC/judge/user/26/5/26_5.c:5:5: error: ‘cout’ undeclared (first use in this function)
+     cout<<lol;
+     ^
+/home/saurabh/CTD/NCC/judge/user/26/5/26_5.c:5:5: note: each undeclared identifier is reported only once for each function it appears in
+/home/saurabh/CTD/NCC/judge/user/26/5/26_5.c:5:11: error: ‘lol’ undeclared (first use in this function)
+     cout<<lol;
+           ^

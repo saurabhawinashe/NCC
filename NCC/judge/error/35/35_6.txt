@@ -1,0 +1,4 @@
+/home/saurabh/CTD/NCC/judge/user/35/6/35_6.cpp:1:24: fatal error: mainwindow.h: No such file or directory
+ #include "mainwindow.h"
+                        ^
+compilation terminated.

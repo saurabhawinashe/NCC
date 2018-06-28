@@ -1,0 +1,4 @@
+/home/saurabh/CTD/NCC/judge/user/57/5/57_5.c: In function ‘main’:
+/home/saurabh/CTD/NCC/judge/user/57/5/57_5.c:8:21: error: expected ‘;’ before ‘)’ token
+     for(i=0;i<=T,i++)
+                     ^

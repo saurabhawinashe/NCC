@@ -1,0 +1,120 @@
+    #id1
+    {
+      background-color: black;
+      border-width: 4px;
+      border-style: inset;
+      border-color: silver;
+
+
+
+      border-radius: 2%;
+      opacity: .6;
+
+
+
+    }
+
+    #id2
+    {
+      background-color: black;
+      border-width: 4px;
+      border-style: inset;
+      border-color: silver;
+
+
+
+      border-radius: 2%;
+      opacity: .6;
+
+
+
+    }
+
+
+    .a,.mob,.name,.email,.user,.pass
+    {
+      background-color: transparent;
+
+      border-top:none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 2px solid silver;
+      text-align: center;
+      color: silver;
+      border-radius: 10%;
+      font-weight:600;
+      font-family: sans-serif;
+
+
+    }
+
+
+    .btn
+    {
+
+      border-radius: 10%;
+      font-weight: bolder;
+      color: black;
+      margin-left:46%;
+	  height:80px;
+	  width:20%;
+	  font-size:25px;
+    margin-left: 50%;
+    }
+    .name,.email,.mob,.user,.pass
+    {
+      width:90%;
+      height:35px;
+
+      transition: background-color 2s,width 1s,border-radius 1s,color 1s;
+  }
+  /*.name:hover
+  {
+    border-radius: 0%;
+    width:100%;
+  }
+  .email:hover
+  {
+    border-radius: 0%;
+    width:100%;
+  }
+  .mob:hover
+  {
+    border-radius: 0%;
+
+    width:100%;
+  }
+  .user:hover
+  {
+    color:black;
+    border-radius: 0%;
+    background: lightblue;
+  }
+  .pass:hover
+  {
+    color:black;
+    border-radius: 0%;
+    background: white;
+  }*/
+  .pb
+  {
+      margin-top:0px;
+      background:black;
+    display:block;
+    padding-top:10px;
+      padding-left:26px;
+      font-size:20px;
+      color:white;
+      height:50px;
+  }
+
+
+.inst
+{
+  color:white;
+  margin-left: 32.5%;
+}
+
+
+
+  

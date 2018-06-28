@@ -1,0 +1,16 @@
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c: In function ‘main’:
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:6:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘int’
+     int i,j,S,k,l,temp[1000],m;
+     ^
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:7:17: error: ‘T’ undeclared (first use in this function)
+     scanf("%d",&T);
+                 ^
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:7:17: note: each undeclared identifier is reported only once for each function it appears in
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c: At top level:
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:42:1: error: unknown type name ‘pe’
+ pe your code here!*/
+ ^
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:42:9: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘code’
+ pe your code here!*/
+         ^
+/home/saurabh/CTD/NCC/judge/user/57/2/57_2.c:42:9: error: unknown type name ‘code’

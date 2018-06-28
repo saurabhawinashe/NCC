@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+      <script src="{% static "js/ace.js" %}" type="text/javascript" charset="utf-8"></script>
+    <title>Question Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/questionncc.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "css/headfoot.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "css/timer.css" %}">
+            <script src="{% static "js/timerscript.js" %}"></script>
+    
+
+    <!-- Custom CSS -->
+    <style>
+	/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 15px;
+height: 15px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid rgb(20,20,20);
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: rgb(20,20,20);  
+border-radius: 10px;
+border: 1px solid rgb(0,206,209);
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgb(20,20,20);  
+}
+    body
+    {
+        padding-top: 70px;
+        background-image: url(static/Images/stripesdark1.png);
+        overflow-y: auto;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    textarea
+    {
+        resize: none;
+    }
+    #editor { 
+      box-shadow: 5px 5px 9px black;
+      border-radius: 2px;
+      border: 1px solid black;
+       width:100%;
+       height:460px;
+       font-size:15px;
+    }
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+            window.history.forward();
+        }
+</script>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sept 14, 2017 00:55:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("timer").innerHTML = hours + ":"
+    + minutes + ":" + seconds;
+
+    // If the count down is over, write some text
+    if (distance <= 1000) {
+        clearInterval(x);
+        document.getElementById("demo").click();
+    }
+}, 1000);
+</script>
+
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+              <div class="navbar-header"><a><img src="{% static "Images/pisb1.png" %}" height="48px" width="120px" style="padding-top: 8px;margin-left: 0px; padding-right: 8px; "></a></div>
+              <div class="navbar-header">
+              <a class="navbar-brand">
+
+                  <a class="navbar-brand"><span class="navtext" style="width:550px;font-size:22px;"><b>QUESTIONS PAGE</b></span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+
+              <ul class="nav navbar-nav" style="margin-top:10px;">
+                  <li><label class="STLabel" id="timer" style="padding-left:251px; margin-left:1px;color:rgb(0,206,209);font-size:22px;"></label></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right"><!--Right side pe baaki pages ke links ke liye-->
+                  <li><a><span class="navtext"><b>SCORE: {{ p.total_score }}</b></span></a></li>
+                  <li><a href="/questions"><span class="navtext"><b>QUESTION HUB</b></span></a></li>
+                  <li><a href="/leaderboard"><span class="navtext"><b>LEADERBOARD</b></span></a></li>
+
+
+                  <li><a href="/logout" id="demo"><span class="navtext"><b>LOGOUT</b></span><span class="glyphicon glyphicon-log-out"></span></a></li>
+              </ul>
+          </div>
+      </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid text-center">
+
+        <div class="row content">
+<!--********************************First DIVISION***************************************** -->
+            <div class="col-lg-6 text-center" >
+                
+                    <textarea class="text2" id="text123" rows="26" cols="70" placeholder="Question will come here" disabled>{{ question.question_text }}</textarea> <!--Question box -->
+
+                    <!--<div class="row">
+                          <textarea class="textbox" placeholder="Inputs will come here" style="margin:15px;"></textarea>
+                          
+                          <div class="row">
+                          <button class="btn red btn-block" id="run"> Check Output</button>
+                        </div>
+                          
+                          <textarea  class="textbox" placeholder="Outputs will come here" style="margin:15px;" disabled></textarea>
+                    <br><br><br>
+                 </div>-->
+
+            </div>
+<!--********************************Second DIVISION***************************************** -->
+            <div class="col-lg-6">
+                	<form action="/{{ question.id }}/save" id="submitcode" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                <div class="rowedit" id="editor" >/*Type your code here!*/</div><br>
+               <!-- Drop down list and save button-->
+                <div class="row1">
+                    <div class="col-md-4">
+                         <form class="drop" id="drop1">
+                         <input type="radio" name="Language" value=".c"><span class="cradio">C</span>
+                         <input type="radio" name="Language" value=".cpp"><SPAN class="cradio" >C++</SPAN>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="button" name="load" value="LOAD BUFFER" class="btn red" id="loadbuffer">
+                    </div>
+                                         <div class="col-md-4">
+                         <input type="button" name="load" value="SAVE" class="btn red" id="save">
+                    </div>
+
+                </div>
+<br><br><br>
+                <div class="rowsub">
+                    <div class="col-md-6">
+
+                <div id="file">
+ <!--<form action="#">-->
+                    <div class="file-field input-field">
+                      <div class="btn red btn-block">
+                        <input type="file" name="cfile" value = "FILE" id="doc" style="outline:none;">
+                      </div>
+                      
+                    </div>
+  <!--</form>-->
+                </div>
+                    </div>
+                <div class="col-md-6">
+                
+                     <input type="button" value="SUBMIT" class="btn red " id="submit" >
+                    
+                </div>
+
+                </div>
+<br><br><br>
+
+
+
+            </div>
+        </div>
+     </div>
+     <br><br><br><br>
+        <!-- /.row -->
+    <footer>
+        <div class="row2">
+             Copyright<b>©</b> : PICT IEEE STUDENT BRANCH,CTD'17
+        </div>
+    </footer>
+
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+<script type="text/javascript">
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/chaos");
+        editor.setShowPrintMargin(false);
+        editor.getSession().setMode("ace/mode/c_cpp");
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#loadbuffer").click(function(){
+             var button = $(this),
+             	 type = "loadbuffer",
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('load',type);
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    dataType:"text",
+                    })
+                    .done(function(msg){
+                           editor.setValue(msg);
+                    });
+                 });
+        $("#submit").click(function(){
+            console.log("hello");
+             var button=$(this),
+                 code = (editor.getSession().getValue()),
+             	 type = "submit",
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('tbox',code);
+                 data.append('load',type);
+                 data.append('no','1');
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    dataType:"html",
+                    })
+                    .done(function(msg){
+                        document.write(msg);
+                    });
+                    });
+        $("#save").click(function(){
+             var button=$(this),
+             	 type = "save",
+             	 code = (editor.getSession().getValue()),
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('load',type);
+                 data.append('tbox',code);
+                 console.log("hello");
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    dataType:"text",
+                    })
+                    .done(function(msg){
+                        alert(msg);
+                    });
+                    });
+         });
+
+    </script>
+ 
+</body>
+
+</html>

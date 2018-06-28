@@ -1,0 +1,38 @@
+Having recently learnt the concept of sieving to generate prime numbers and having solved Prime Queries from a recent long challenge, Abizer is high on his knowledge of prime numbers and claims to know everything about them.
+His friend ,Chinmay therefore asked him to answer a simple question.
+Chinmay gave Abizer a number N and asked him if it was possible for him to express it as a sum of 2 prime numbers. 
+Abizer,with all his knowledge, was stumped so he asked his fellow teammate, Kedar to help him out with the question.
+
+Input format:
+First line contains the number of test cases,T.
+Each test case contains a single integer, N.
+
+Output format:
+If the number N can be represented as a sum of 2 prime numbers, print "YES" without quotes.
+Else print "NO".
+
+Constraints
+
+Subtask 1: (20 points)
+1<=T<=10^5
+1<=N<=10^6
+
+Subtask 2: (80 points)
+1<=T<=100
+1<=N<=10^12
+
+Sample:
+Input:
+5
+3
+9
+10
+15
+17
+
+Output:
+NO
+YES
+YES
+YES
+NO

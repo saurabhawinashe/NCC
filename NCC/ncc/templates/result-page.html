@@ -1,0 +1,332 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Result</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "css/headfoot.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        background-color: rgb(0,0,0);
+       background-image: url("images/stripesdark1.png");
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    .foot{
+            font-family: "Calibri";
+            vertical-align:text-bottom;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            color: grey;
+       }s
+        .score  { text-align: center;
+       color: black;
+        margin-top: 0px;
+        margin-bottom:  0px;
+
+
+}
+.rank{
+
+  -moz-animation-name:score1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:0s;
+
+        animation-name:score1
+        animation-duration:2s;
+        animation-delay:0s;
+
+        -webkit-animation-name:score1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:0s;
+}
+ @-moz-keyframes score1 {
+  from {
+    transform : scale(0);
+    opacity: 0;
+  }
+
+  to {
+   transform : scale(1);
+    opacity: 1;
+  }
+}
+.result{
+-moz-animation-name:result1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:2s;
+        -moz-animation-fill-mode:backwards;
+        animation-name:result1;
+        animation-duration:2s;
+        animation-delay:0s;
+
+        -webkit-animation-name:result1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:0s;
+}
+
+@-moz-keyframes rank1 {
+  from {
+    transform : scale(0);
+    opacity: 0;
+  }
+
+  to {
+   transform : scale(1);
+    opacity: 1;
+  }
+}
+
+        .scoreee  {
+       -moz-animation-name:rank1;
+        -moz-animation-duration:2s;
+        -moz-animation-delay:1s;
+        -moz-animation-fill-mode:backwards;
+
+        animation-name:rank1;
+        animation-duration:2s;
+        animation-delay:1s;
+animation-fill-mode:backwards;
+
+        -webkit-animation-name:rank1;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay:1s;
+                -webkit-animation-fill-mode:backwards;
+
+       }
+
+  #score111{
+    font-size: 40px;
+  }
+  #rank111
+  {
+    font-size: 50px;
+  }
+  .glow
+  {
+    color: rgb(0,206,208);
+    margin-top: 45px;
+    text-align: center;
+   /* box-shadow: 10px 10px 20px black;
+    background-color: black;*/
+  }
+
+        .pie{
+        margin-top: 50px;
+        background-color: transparent;
+        /*border: 2px solid black;*/
+        opacity: 1;
+        -moz-animation-name:chart1;
+        -moz-animation-duration:3s;
+        -moz-animation-delay:0s;
+
+        animation-name:chart1;
+        animation-duration:3s;
+        animation-delay:0s;
+
+        -webkit-animation-name:chart1;
+        -webkit-animation-duration:3s;
+        -webkit-animation-delay:0s;
+      }
+      @-moz-keyframes chart1
+      {
+
+        0%{
+          opacity: 0;
+        }
+
+        100%{
+          opacity: 1;
+        }
+      }
+      #piechart{
+        border: 10px solid white;
+      }
+      #chartContainer{
+      /*background-color: rgb(135,206,235);*/
+      background-color: transparent;
+     height: 1000px;
+     padding: 30px 30px 30px 30px;
+
+
+}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
+   <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+            {
+                theme: "theme3",
+                            animationEnabled: true,
+                title:{
+                    text: "Performance",
+                    fontSize: 40,
+                    fontColor: "rgb(0,206,208)",
+                    fontFamily:"Calibri"
+                },
+                toolTip: {
+                    shared: true
+                },
+                axisY: {
+                    title: "Score",
+                    color: "blue"
+                },
+
+                data: [
+                {
+                    type: "column",
+                    name: "Highest Score",
+                    color:"rgb(0,51,153)",
+                    legendText: "Highest Score",
+
+                    showInLegend: true,
+                    dataPoints:[
+                    {label: "Question1", y: {{ max1 }},color:"rgb(0,51,153)"},
+                    {label: "Question2", y: {{ max2 }},color:"rgb(0,51,153)"},
+                    {label: "Question3", y: {{ max3 }},color:"rgb(0,51,153)"},
+                    {label: "Question4", y: {{ max4 }},color:"rgb(0,51,153)"},
+                    {label: "Question5", y: {{ max5 }},color:"rgb(0,51,153)"},
+                    {label: "Question6", y: {{ max6 }},color:"rgb(0,51,153)"}
+
+
+                    ]
+                },
+                {
+                    type: "column",
+                    name: "Average Score",
+                    color:"rgb(0,136,204 )",
+                    legendText: "Average Score",
+
+                    showInLegend: true,
+                    dataPoints:[
+                    {label: "Question1", y: {{ avg1 }},color:"rgb(0,136,204 )"},
+                    {label: "Question2", y: {{ avg2 }},color:"rgb(0,136,204 )"},
+                    {label: "Question3", y: {{ avg3 }},color:"rgb(0,136,204 )"},
+                    {label: "Question4", y: {{ avg4 }},color:"rgb(0,136,204 )"},
+                    {label: "Question5", y: {{ avg5 }},color:"rgb(0,136,204 )"},
+                    {label: "Question6", y: {{ avg6 }},color:"rgb(0,136,204 )"}
+
+
+                    ]
+                },
+                  {
+                    type: "column",
+                    name: "Your Score",
+                    color:"rgb(0,255,255)",
+                    legendText: "Your Score",
+
+                    showInLegend: true,
+                    dataPoints:[
+                    {label: "Question1", y: {{ sc1 }},color:"rgb(0,255,255)"},
+                    {label: "Question2", y: {{ sc2 }},color:"rgb(0,255,255)"},
+                    {label: "Question3", y: {{ sc3 }},color:"rgb(0,255,255)"},
+                    {label: "Question4", y: {{ sc4 }},color:"rgb(0,255,255)"},
+                    {label: "Question5", y: {{ sc5 }},color:"rgb(0,255,255)"},
+                    {label: "Question6", y: {{ sc6 }},color:"rgb(0,255,255)"}
+
+
+                    ]
+                }
+
+
+                ],
+              legend:{
+                cursor:"pointer",
+                      fontFamily: "Calibri",
+                        fontColor: "rgb(0,200,255)",
+                        fontSize:20,
+                        color:"grey",
+                itemclick: function(e){
+                  if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                  }
+                  else {
+                    e.dataSeries.visible = true;
+                  }
+                    chart.render();
+                }
+              },
+            });
+
+    chart.render();
+    }
+    </script>
+<script type="text/javascript" src="{% static "js/canvasjs.min.js" %}"></script>
+<script type="text/javascript" src="{% static "js/jquery.canvasjs.min.js" %}"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+          <div class="navbar-header"><a><img src="{% static "Images/pisb1.png" %}" height="48px" width="120px" style="padding-top: 8px;margin-left: 0px; padding-right: 8px; "></a></div>
+            <div class="navbar-header">
+              <a class="navbar-brand">
+
+                  <a class="navbar-brand"><span class="navtext" style="width:550px;font-size:22px;"><b>RESULT</b> </span></a><!--PAGE HEADING KE LIYE-->
+              </div>
+
+          </div>
+      </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-3 text-center score glow">
+              <br><br><br><br>
+                             <div class = "rank"> <h1><b ><u>YOUR RANK</u></b>
+                              <br>
+                              <br>
+                                 <font id="rank111"> {{ rank }} </font>
+                              <br><br><br><br></div>
+              <div class="scoreee "> <h1> <b><u>YOUR SCORE</u></b><br>
+                <br>
+                          <font id="score111">  {{ p.total_score }} </font>
+                <br></h1>
+                <br>
+                </div>
+            </div>
+            <div class="col-lg-9 text-center pie">
+                <div id="chartContainer" style="height: 450px; width: 100%;"></div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery Version 1.11.1 -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+  <footer>
+        <div class="row2">
+             Copyright<b>©</b> : PICT IEEE STUDENT BRANCH,CTD'17
+        </div>
+    </footer>
+    <!-- /.con
+
+</body>
+
+</html>

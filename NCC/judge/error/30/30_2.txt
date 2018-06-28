@@ -1,0 +1,7 @@
+/home/saurabh/CTD/NCC/judge/user/30/2/30_2.cpp: In function ‘int main()’:
+/home/saurabh/CTD/NCC/judge/user/30/2/30_2.cpp:10:10: error: expected ‘,’ or ‘;’ before ‘for’
+          for(int m=0;m<5;m++)
+          ^
+/home/saurabh/CTD/NCC/judge/user/30/2/30_2.cpp:10:22: error: ‘m’ was not declared in this scope
+          for(int m=0;m<5;m++)
+                      ^

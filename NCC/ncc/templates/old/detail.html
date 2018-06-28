@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#loadbuffer").click(function(){
+             var button = $(this),
+             	 type = "loadbuffer",
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('load',type);
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    })
+                    .done(function(msg){
+                    document.getElementById("text").innerHTML=msg;
+                    });
+                 });
+        $("#submit").click(function(){
+             var button=$(this)
+             	 type = "submit",
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('load',type);
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    dataType:"html",
+                    })
+                    .done(function(msg){
+                        document.write(msg);
+                    });
+                    });
+        $("#save").click(function(){
+             var button=$(this),
+             	 type = "save",
+                 form = $(button).closest('form'),
+                 lang = form.find("input[name = 'Language']").val(),
+                 csrf = form.find("input[name = 'csrfmiddlewaretoken']").val(),
+                 action = form.attr('action'),
+                 data = new FormData(form[0]);
+                 data.append('load',type);
+                 $.ajax({
+                    method:"POST",
+                    url:action,
+                    data:data,
+                    processData:false,
+                    contentType:false,
+                    })
+                    .done(function(msg){
+                        alert(msg);
+                    });
+                    });
+         });
+
+    </script>
+</head>
+<body>
+<a href="/questions">Questions</a>
+<a href="/leaderboard">Leaderboard</a>
+<a href="/logout">Logout</a><br>
+{{ question.question_text }}
+<form id="formid" action="/{{ question.id }}/save" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<textarea id="text" rows="10" columns="40" name="tbox"></textarea><br><br>
+<input type="radio" name="Language" value=".c" checked>C<br>
+<input type="radio" name="Language" value=".cpp">C++<br><br>
+<input type= "file" name="cfile"><br>
+    <input id="submit" type="button" name="load" value="Submit"><br>
+<input id="loadbuffer" type="button" name="load" value="Load buffer"><br>
+    <input id="save" type="button" name="load" value="Save"><br>
+</form>
+</body>
+</html>

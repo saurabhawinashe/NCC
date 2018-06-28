@@ -1,0 +1,138 @@
+#text123
+{
+	width: 100%;
+	height: 100%;
+	      box-shadow: 5px 5px 9px black;
+	background: rgb(20,20,20);
+	border-color: rgb(1,206,209);
+	color: white;
+	border-color: black;
+	border-radius: 10px;
+	margin-left:0px;  
+}
+.textbox
+{
+	width: 95%;
+	height: 40px;
+	      box-shadow: 5px 5px 9px black;
+	background: rgb(20,20,20);
+	border-color: black;
+	color: white;
+	border-radius: 10px;
+	margin-left:0px; 
+	outline: none;
+}
+#run
+{
+	margin-left: 250px;
+	width: 150px;
+}
+
+#savebutton
+{
+	width: 100%;
+}
+#loadbuffer
+{
+	width: 100%;
+}
+#submitbutton
+{
+	width: 100%;
+}
+#drop1
+{
+	background: rgb(1,206,209);
+	height: 34px;
+	width: 100%;
+	box-shadow: 0px 5px 0px 0px rgb(20,20,20);
+	border-radius: 5px;
+	  height: 34px;
+	  font-size: 15px;
+	  text-decoration: none;
+	  
+	  color: #fff;
+	  position: relative;
+	  display: inline-block;
+}
+
+#drop1:hover
+{
+	background: white;
+	color: black;
+}
+.btn {
+  position: relative;
+  display: block;
+  border-radius: 
+  height: 35px;
+  padding: 20;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+      box-shadow: 5px 5px 9px black;
+  background-color: #2ecc71;
+  color: #ecf0f1;
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;  
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, .3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.btn.red {
+  background-color: rgb(0,206,209);
+}
+
+.btn.red:hover, .btn.red:focus {
+  background-color: rgb(0,200,200);
+}
+.cradio
+{
+	font-size: 20px;
+	color: rgb(0,206,209);
+	
+	padding-left: 5px;
+	padding-right: 10px;
+}

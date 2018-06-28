@@ -1,0 +1,29 @@
+A year ago on the bench in PICT college campus, Akash found an array of n numbers. He believes that permutation p is right if for all 1 ≤ i < n condition, that a[i]*(a[i+1]) is not a perfect square, holds. Akash wants to find number of right permutations modulo 10^9 + 7.
+Since answering it was beyond him, Subodh stepped in to help him out with it.
+
+Input format:
+First line contains number of test cases,T
+Second line of input data contains single integer n-the number of elements in the array
+
+Next line contains n integers a1,a2,...,an-the found array
+
+Output format:
+Output a single integer - number of right permutation modulo 10^9+7
+
+Constraints
+1<=T<=50
+1<=n<=300
+1<=ai<=10^9
+
+Sample:
+Input:
+2
+3
+1 2 4
+7
+5 2 4 2 4 1 1
+
+Output:
+2
+144
+

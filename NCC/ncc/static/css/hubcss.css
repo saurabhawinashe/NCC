@@ -1,0 +1,156 @@
+.button1
+{
+	height: 170px;
+	width:  260px;
+	margin-top: 50px;
+	border-radius: 9px;
+	background-color: rgb(20,20,20);
+	box-shadow: 7PX 7PX 8px rgb(18,18,18);
+	color: rgb(1,206,209);
+	font-size: 20px;
+	border: 2px solid rgb(1,206,211);
+}
+
+.button1 #tooltip1
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1 #tooltip2
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1 #tooltip3
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1 #tooltip4
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1 #tooltip5
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1 #tooltip6
+{
+	display: none;
+	z-index: 21;
+}
+
+.button1:hover #tooltip6
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover #tooltip5
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover #tooltip4
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover #tooltip3
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover #tooltip2
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover #tooltip1
+{
+	display: block;
+	animation: fadeIn 1s;
+}
+
+.button1:hover .q1
+{
+	display: none;
+
+}
+
+#heading
+{
+	text-align: center;
+	font-size: 30px;
+	color: rgb(1,206,209);
+	text-decoration: none;
+}
+
+.button1:hover
+{
+
+	transition: 0.1s;
+	transform: scale(1.32);
+	box-shadow: 10px 10px 9px rgb(18,18,18);
+	background-color: rgb(20,20,20);
+	
+}
+
+#time1
+{
+	margin-left: 280px;
+	
+}
+
+@keyframes fadeIn
+{
+	0%{
+		opacity: 0;}
+		50%{
+			opacity: 0.7;
+		}
+	100%{
+		opacity: 0.7;}
+}
+
+
+.rowww{
+	position: absolute;
+	margin-top: 33px;
+}
+.list
+{
+	color: rgb(28,194,184);
+}
+
+
+#horizontal
+{
+	color: rgb(82,83,88);
+}
+
+#navbar
+{
+	background-color: rgb(20,20,20);
+
+}
+
+.row{
+	position: relative;
+}
+#page
+{
+	background-color: rgb(30,30,30);
+}
+
